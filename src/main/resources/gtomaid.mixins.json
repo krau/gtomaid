@@ -1,0 +1,16 @@
+{
+  "required": true,
+  "minVersion": "0.8",
+  "package": "app.unv.gtomaid.mixin",
+  "compatibilityLevel": "JAVA_17",
+  "plugin": "app.unv.gtomaid.mixin.GTOMaidMixinPlugin",
+  "mixins": [
+    "botania.ToolCommonsMixin",
+    "botania.GaiaGuardianMixin",
+    "extrabotany.ExtrabotanyGaiaMixin"
+  ],
+  "client": [],
+  "injectors": {
+    "defaultRequire": 1
+  }
+}

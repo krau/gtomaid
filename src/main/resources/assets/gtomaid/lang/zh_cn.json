@@ -1,0 +1,5 @@
+{
+  "task.gtomaid.time_twist": "扭曲时间",
+  "task.gtomaid.time_twist.desc": "使用时间扭曲者加速格雷科技机器",
+  "task.gtomaid.time_twist.condition.has_time_twister": "持有时间扭曲者"
+}

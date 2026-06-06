@@ -1,0 +1,5 @@
+{
+  "task.gtomaid.time_twist": "Time Twist",
+  "task.gtomaid.time_twist.desc": "Accelerate GT machines using the Time Twister",
+  "task.gtomaid.time_twist.condition.has_time_twister": "Has Time Twister"
+}
