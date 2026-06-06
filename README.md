@@ -65,7 +65,7 @@ GTO 专供, 其他包大概率不能用. 当前适配的 GTO 版本为 0.5.5beta
 
 ## 安装
 
-服务端和客户端均需要安装
+在 [releases](https://github.com/krau/gtomaid/releases/) 页面下载 jar , 服务端和客户端均需要安装
 
 ## 构建
 
