@@ -16,18 +16,6 @@ jobs:
         with:
           fetch-depth: 0
 
-      - uses: actions/setup-java@v4
-        with:
-          distribution: temurin
-          java-version: 21
-
-      - name: Resolve version from tag
-        id: ver
-        run: echo "version=${GITHUB_REF_NAME#v}" >> "$GITHUB_OUTPUT"
-
-      - name: Build
-        run: ./gradlew build -Pmod_version=${{ steps.ver.outputs.version }} --no-daemon
-
       - uses: actions/setup-node@v4
         with:
           node-version: 20
@@ -35,9 +23,4 @@ jobs:
       - name: Generate changelog and create release
         env:
           GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
-        run: npx -y changelogithub --output CHANGELOG.md
-
-      - name: Upload jar to release
-        env:
-          GH_TOKEN: ${{ secrets.GITHUB_TOKEN }}
-        run: gh release upload "${GITHUB_REF_NAME}" build/libs/gtomaid-${{ steps.ver.outputs.version }}.jar --clobber
+        run: npx -y changelogithub
