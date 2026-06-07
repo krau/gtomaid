@@ -20,7 +20,6 @@ import java.util.function.Predicate;
 public final class TaskTimeTwist implements IMaidTask {
 
     public static final ResourceLocation UID = ResourceLocation.fromNamespaceAndPath(GTOMaid.MOD_ID, "time_twist");
-    private final TwistScheduleState scheduleState = new TwistScheduleState();
 
     @Override
     public ResourceLocation getUid() {
@@ -40,6 +39,7 @@ public final class TaskTimeTwist implements IMaidTask {
 
     @Override
     public List<Pair<Integer, BehaviorControl<? super EntityMaid>>> createBrainTasks(EntityMaid maid) {
+        TwistScheduleState scheduleState = new TwistScheduleState();
         return Lists.newArrayList(
                 Pair.of(5, GTTimeTwistLogic.createMoveTask(scheduleState)),
                 Pair.of(6, GTTimeTwistLogic.createActionTask(scheduleState)));
